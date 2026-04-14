@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand */
+  --brand-50: #eef3ff;
+  --brand-100: #dfe9ff;
+  --brand-500: #2f4ea8;
+  --brand-600: #254192;
+
+  /* Neutrals */
+  --surface: #f6f8fc;
+  --surface-panel: #ffffff;
+  --border: #dbe1ea;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+
+  /* Semantic */
+  --success-50: #eaf8f0;
+  --success-200: #b8e7c8;
+  --success-700: #15803d;
+  --danger-50: #fef2f2;
+  --danger-600: #dc2626;
+}
+
+@theme inline {
+  --color-background: var(--surface);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Utilidades globales para el dashboard */
+.panel {
+  border: 1px solid var(--border);
+  background: var(--surface-panel);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
